@@ -1,4 +1,39 @@
 $main-color: #000000
+$footer-bg: rgba(136, 190, 204, 0.25)
+$yellow: rgb(249, 179, 67)
+$red: #E69596
+$green: #5CB772
+$blue: #00ABEC
+
+//Голубые ссылки
+@mixin  blue-link
+    font:
+        family: 'Montserrat', sans-serif
+        weight: 500
+        size: 16px
+    color: $blue
+    text:
+        decoration: underline
+
+//Заголовки секций
+@mixin  section-title
+    font:
+        family: 'Montserrat', sans-serif
+        weight: 500
+        size: 36px
+    text:
+        decoration: none
+    color: $main-color
+
+//Тексты секций
+@mixin  section-title
+    font:
+        family: 'Montserrat', sans-serif
+        weight: 300
+        size: 20px
+    text:
+        decoration: none
+    color: $main-color
 
 *
     box-sizing: border-box
@@ -14,13 +49,21 @@ html
     margin-left: auto
     margin-right: auto
     padding: 0 30px
+    @media screen and (576px <= width <= 1024px)
+        padding: 0 30px
+        margin: 0 auto
+    @media screen and (width < 576px)
+        padding: 0 15px
+        margin: 0 auto
 
- /*Шапка начало*/
+/*Шапка сайта Desktop начало*/
 .header
     display: flex
     align-items: center
     margin-top: 30px
     height: 122px
+    @media screen and (width <= 1024px)
+        display: none
 
 .header-logotype
     width: 45%
@@ -47,4 +90,102 @@ html
 
 .nav_items--active
     font-weight: 700
-/*Шапка конец*/
+/*Шапка сайта Desktop конец*/
+
+/*Шапка сайта Mobile начало*/
+.header-mobile
+    background-color: $footer-bg
+
+    @media screen and (width > 1024px)
+        display: none
+
+.header-line-mobile
+    padding-top: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-bottom: 16px
+
+.header-nav-mobile
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 16px
+    padding-bottom: 40px
+
+.icon
+    width: 100%
+    height: 100%
+
+.nav-mobile-active
+    /*visibility: hidden
+    display: none
+
+.nav-mobile-active.open
+    /*visibility: visible
+    display: block
+
+.burger-button
+    border: none
+    cursor: pointer
+    background: none
+
+.nav_items-mob
+    font-family: 'Montserrat', sans-serif
+    font-weight: 300
+    font-size: 20px
+    color: $main-color
+    text-decoration: none
+    text-transform: uppercase
+    padding: 5px
+
+    &:hover
+        color: $yellow
+
+.nav_items-mob--active
+    font-weight: 700
+/*Шапка сайта Mobile конец*/
+
+.main-slider
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    gap: 20px
+    margin-top: 40px
+    @media screen and (width <= 1024px)
+        flex-direction: column-reverse
+        align-items: center
+
+.slider-info
+    display: flex
+    flex-direction: column
+    width: 40%
+    @media screen and (width <= 1024px)
+        width: 100%
+        text-align: center
+
+.slider-title
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+    font-size: 50px
+    color: $yellow
+    text-decoration: none
+    text-transform: uppercase
+
+.slider-description, .slider-phone
+    font-family: 'Montserrat', sans-serif
+    font-weight: 300
+    font-size: 24px
+    color: $main-color
+    text-decoration: none
+    padding: 5px
+
+.slider-link
+    @include blue-link
+
+.slider-photo1
+    border-top-left-radius: 312px
+    width: 100%
+    height: 100%
+    @media screen and (width <= 1024px)
+        border-top-left-radius: 0
