@@ -13,11 +13,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <script defer src="assets/js/main.js">
+    </script>
 </head>
 
 <body>
-
-    <!--Шапка сайта начало-->
+    <!--Шапка сайта  Desktop начало-->
     <div class="container">
         <header class="header">
             <div class="header-logotype">
@@ -31,10 +32,55 @@
                 <a class="nav_items" href="contacts.html">Контакты</a>
             </nav>
         </header>
-        <!--Шапка сайта конец-->
+    </div>
+    <!--Шапка сайта Desktop конец-->
 
-        <main class="main"></main>
-        <footer class="footer"></footer>
+    <!--Шапка сайта Mobile начало-->
+    <header class="header-mobile">
+        <div class="container">
+            <div class="header-line-mobile">
+                <div class="header-logotype-mobile">
+                    <a href="index.html"><img class="icon" alt="Логотип компании"
+                            src="assets/images/static/logotype.svg"></a>
+                </div>
+                <div class="exit-icon-mobile">
+                    <button class="burger-button" id="burger-menu"><img class="icon" alt="Логотип компании"
+                            src="assets/images/static/burger-icon.svg"></button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-mobile-active" id="nav-mobilejs">
+            <nav class="header-nav-mobile">
+                <a class="nav_items-mob nav_items-mob--active" href="index.html">Главная</a>
+                <a class="nav_items-mob" href="gallery.html">Галерея</a>
+                <a class="nav_items-mob" href="price.html">Цены</a>
+                <a class="nav_items-mob" href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <!--Шапка сайта Mobile конец-->
+
+    <main class="main">
+        <div class="container">
+            <section class="main-slider">
+                <div class="slider-info">
+                    <h1 class="slider-title">Открыт набор учеников 2023-2024</h1>
+                    <p class="slider-description">Для записи, согласования посещения
+                        и любых вопросов обращайтесь по телефону:
+                    </p>
+                    <p class="slider-phone">+7 (901) 308-01-48</p>
+                    <a class="slider-link">Заказать обратный звонок</a>
+                </div>
+                <div class="slider-photos">
+                    <img class="slider-photo1" src="assets/images/index/slider-photo1.jpg">
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+    <footer class="footer"></footer>
 
 
 </body>
