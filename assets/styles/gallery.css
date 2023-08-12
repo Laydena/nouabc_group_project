@@ -37,9 +37,11 @@ html {
 }
 
 .main__gallery {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+  /*flex-flow: row wrap */
+  /*justify-content: space-between */
 }
 
 .main__title {
