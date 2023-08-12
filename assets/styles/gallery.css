@@ -38,10 +38,16 @@ html {
 
 .main__gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2%;
-  /*flex-flow: row wrap */
-  /*justify-content: space-between */
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
 }
 
 .main__title {
@@ -59,4 +65,13 @@ html {
   font-size: 20px;
   text-decoration: none;
   color: #000000;
+}
+
+.wrapper {
+  background-color: rgba(136, 190, 204, 0.25);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=gallery.css.map */
