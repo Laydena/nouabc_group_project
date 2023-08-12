@@ -1,1 +1,62 @@
-/*# sourceMappingURL=index.css.map */
+.main-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-top: 40px;
+}
+@media screen and (width <= 1024px) {
+  .main-slider {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.slider-info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+@media screen and (width <= 1024px) {
+  .slider-info {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.slider-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: rgb(249, 179, 67);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.slider-description, .slider-phone {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.slider-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #00ABEC;
+  text-decoration: underline;
+}
+
+.slider-photo1 {
+  border-top-left-radius: 312px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (width <= 1024px) {
+  .slider-photo1 {
+    border-top-left-radius: 0;
+  }
+}/*# sourceMappingURL=index.css.map */
