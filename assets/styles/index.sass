@@ -41,17 +41,27 @@ $blue: #00ABEC
     align-items: flex-end
     gap: 20px
     margin-top: 40px
+
     @media screen and (width <= 1024px)
         flex-direction: column-reverse
         align-items: center
+
+    @media screen and (width < 576px)
+        gap: 16px
+        margin-top: 22px
 
 .slider-info
     display: flex
     flex-direction: column
     width: 40%
+    gap: 25px
+
     @media screen and (width <= 1024px)
         width: 100%
         text-align: center
+
+    @media screen and (width < 576px)
+        gap: 16px
 
 .slider-title
     font-family: 'Montserrat', sans-serif
@@ -60,6 +70,10 @@ $blue: #00ABEC
     color: $yellow
     text-decoration: none
     text-transform: uppercase
+    margin: 0
+
+    @media screen and (width < 576px)
+        font-size: 28px
 
 .slider-description, .slider-phone
     font-family: 'Montserrat', sans-serif
@@ -67,7 +81,7 @@ $blue: #00ABEC
     font-size: 24px
     color: $main-color
     text-decoration: none
-    padding: 5px
+    margin: 0
 
 .slider-link
     @include blue-link
@@ -76,5 +90,6 @@ $blue: #00ABEC
     border-top-left-radius: 312px
     width: 100%
     height: 100%
+
     @media screen and (width <= 1024px)
         border-top-left-radius: 0
