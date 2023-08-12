@@ -1,0 +1,77 @@
+$main-color: #000000
+$footer-bg: rgba(136, 190, 204, 0.25)
+$yellow: rgb(249, 179, 67)
+$red: #E69596
+$green: #5CB772
+$blue: #00ABEC
+
+//Голубые ссылки
+@mixin  blue-link
+  font:
+    family: 'Montserrat', sans-serif
+    weight: 500
+    size: 16px
+  color: $blue
+  text:
+    decoration: underline
+
+//Заголовки секций
+@mixin  section-title
+  font:
+    family: 'Montserrat', sans-serif
+    weight: 500
+    size: 36px
+  text:
+    decoration: none
+  color: $main-color
+
+//Тексты секций
+@mixin  section-text
+  font:
+    family: 'Montserrat', sans-serif
+    weight: 300
+    size: 20px
+  text:
+    decoration: none
+  color: $main-color
+
+
+*
+  box-sizing: border-box
+  border: 1px solid rgb(255, 0, 0)
+
+body,
+html
+  margin: 0
+  padding: 0
+  height: 100%
+
+.container
+  max-width: 1170px
+  margin-left: auto
+  margin-right: auto
+  padding: 0 30px
+  @media screen and (576px <= width <= 1024px)
+    padding: 0 30px
+    margin: 0 auto
+  @media screen and (width < 576px)
+    padding: 0 15px
+    margin: 0 auto
+
+.main,
+.main__title,
+.main__text
+  display: flex
+  flex-direction: column
+
+.main__gallery
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+
+.main__title
+  @include section-title
+  padding-top: 5%
+
+.main__text
+  @include section-text
