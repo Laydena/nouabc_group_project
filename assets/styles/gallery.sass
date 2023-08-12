@@ -67,7 +67,12 @@ html
 .main__gallery
   display: grid
   grid-template-columns: repeat(4, 1fr)
-  gap: 2%
+  gap: 30px
+  justify-items: center
+  margin-bottom: 2%
+
+.gallery_img
+  width: 100%
 
 .main__title
   @include section-title
@@ -75,3 +80,10 @@ html
 
 .main__text
   @include section-text
+
+wrapper
+  background-color: $footer-bg
+
+.footer
+  display: flex
+  flex-direction: column
