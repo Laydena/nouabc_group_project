@@ -26,7 +26,7 @@ $blue: #00ABEC
     color: $main-color
 
 //Тексты секций
-@mixin  section-title
+@mixin  section-text
     font:
         family: 'Montserrat', sans-serif
         weight: 300
@@ -49,9 +49,11 @@ html
     margin-left: auto
     margin-right: auto
     padding: 0 30px
+
     @media screen and (576px <= width <= 1024px)
         padding: 0 30px
         margin: 0 auto
+
     @media screen and (width < 576px)
         padding: 0 15px
         margin: 0 auto
@@ -62,6 +64,7 @@ html
     align-items: center
     margin-top: 30px
     height: 122px
+
     @media screen and (width <= 1024px)
         display: none
 
