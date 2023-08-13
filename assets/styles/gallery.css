@@ -39,9 +39,13 @@ html {
 .main__gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2%;
-  /*flex-flow: row wrap */
-  /*justify-content: space-between */
+  gap: 30px;
+  justify-items: center;
+  margin-bottom: 2%;
+}
+
+.gallery_img {
+  width: 100%;
 }
 
 .main__title {
@@ -59,4 +63,13 @@ html {
   font-size: 20px;
   text-decoration: none;
   color: #000000;
+}
+
+wrapper {
+  background-color: rgba(136, 190, 204, 0.25);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=gallery.css.map */
