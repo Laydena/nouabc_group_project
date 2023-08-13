@@ -43,7 +43,7 @@ html {
 }
 
 .header-logotype {
-  width: 45%;
+  width: 44%;
 }
 
 .logo-header {
@@ -54,7 +54,7 @@ html {
 .header-nav {
   display: flex;
   justify-content: space-between;
-  width: 55%;
+  width: 56%;
 }
 
 .nav_items {
