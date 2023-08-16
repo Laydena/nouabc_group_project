@@ -6,16 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Цены</title>
     <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/prices.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/normalize.css">
     <link rel="stylesheet icon" type="image/svg" href="assets/images/static/fvc.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <script defer src="assets/js/main.js">
+    </script>
 </head>
 
 <body>
+    <!--Шапка сайта  Desktop начало-->
+    <div class="container">
+        <header class="header">
+            <div class="header-logotype">
+                <a href="index.html"><img class="logo-header" alt="Логотип компании"
+                        src="assets/images/static/logotype.svg"></a>
+            </div>
+            <nav class="header-nav">
+                <a class="nav_items" href="index.html">Главная</a>
+                <a class="nav_items" href="gallery.html">Галерея</a>
+                <a class="nav_items nav_items--active" href="price.html">Цены</a>
+                <a class="nav_items" href="contacts.html">Контакты</a>
+            </nav>
+        </header>
+    </div>
+    <!--Шапка сайта Desktop конец-->
 
+    <!--Шапка сайта Mobile начало-->
+    <header class="header-mobile">
+        <div class="container">
+            <div class="header-line-mobile">
+                <div class="header-logotype-mobile">
+                    <a href="index.html"><img class="icon" alt="Логотип компании"
+                            src="assets/images/static/logotype.svg"></a>
+                </div>
+                <div class="exit-icon-mobile">
+                    <button class="burger-button" id="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-mobile-active" id="nav-mobilejs">
+            <nav class="header-nav-mobile">
+                <a class="nav_items-mob" href="index.html">Главная</a>
+                <a class="nav_items-mob" href="gallery.html">Галерея</a>
+                <a class="nav_items-mob nav_items-mob--active" href="price.html">Цены</a>
+                <a class="nav_items-mob" href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <!--Шапка сайта Mobile конец-->
+
+    <main class="main">
+        <div class="container">
+            <section class="our_prices">
+                <div class="prices__info">
+                    <p class="prices-title">Стоимость обучения</p>
+                    <p class="prices-text">Наше ценообразование строится на качестве преподавания. Из года в год
+                        наши выпускники занимают призовые места на олимпиадах по английскому языку, а также успешно
+                        сдают ЕГЭ и ГИА.<br><br>
+
+                        Для учеников, которые учатся у нас не первый год, приводят друзей и сразу оплачивают обучение
+                        действую различные, в том числе накопительные, скидки.
+                    </p>
+                </div>
+                <div class="price-cards">
+                    <!-- Первый год -->
+                    <div class="price-card-item">
+                        <div class="price-card-top">
+                            <img class="rhomb" src="assets/images/price/rhomb.svg" alt="Иконка в виде ромба">
+                            <p class="price-card-title">Первый год обучения</p>
+                        </div>
+                        <div class="gl"></div>
+                        <div class="first-price">
+                            <p class="price">7.800₽/месяц</p>
+                            <p class="price-desc">2 академических часа
+                                в неделю</p>
+                        </div>
+                        <div class="second-price">
+                            <p class="price">8.800₽/месяц</p>
+                            <p class="price-desc">3 академических часа
+                                в неделю</p>
+                        </div>
+                        <button class="subscribe-btn" href="#">Записаться</button>
+                    </div>
+                    <!-- Второй год -->
+                    <div class="price-card-item">
+                        <div class="price-card-top">
+                            <img class="rhomb" src="assets/images/price/rhomb.svg" alt="Иконка в виде ромба">
+                            <p class="price-card-title">Второй год обучения</p>
+                        </div>
+                        <div class="gl"></div>
+                        <div class="first-price">
+                            <p class="price">6.900₽/месяц</p>
+                            <p class="price-desc">2 академических часа
+                                в неделю</p>
+                        </div>
+                        <div class="second-price">
+                            <p class="price">7.900₽/месяц</p>
+                            <p class="price-desc">3 академических часа
+                                в неделю</p>
+                        </div>
+                        <button class="subscribe-btn" href="#">Записаться</button>
+                    </div>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>
