@@ -43,17 +43,54 @@ html {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2%;
 }
-
-.gallery-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 30px;
-  transition: 0.5s;
+@media screen and (576px <= width <= 1024px) {
+  .main__gallery {
+    display: flex;
+    flex-direction: column;
+  }
 }
-.gallery-img:hover {
-  transform: scale(1.2);
+@media screen and (width < 576px) {
+  .main__gallery {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+
+@media screen and (width > 1024px) {
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .gallery-img:hover {
+    transform: scale(1.2);
+  }
+}
+@media screen and (576px <= width <= 1024px) {
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: none;
+  }
+}
+@media screen and (width < 576px) {
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .main__title {
@@ -62,7 +99,20 @@ html {
   font-size: 36px;
   text-decoration: none;
   color: #000000;
-  padding-top: 5%;
+  padding-top: 90px;
+}
+@media screen and (576px <= width <= 1024px) {
+  .main__title {
+    text-align: center;
+    padding-top: 35px;
+  }
+}
+@media screen and (width < 576px) {
+  .main__title {
+    text-align: center;
+    padding-top: 35px;
+    font-size: 28px;
+  }
 }
 
 .main__text {
@@ -71,6 +121,17 @@ html {
   font-size: 20px;
   text-decoration: none;
   color: #000000;
+}
+@media screen and (576px <= width <= 1024px) {
+  .main__text {
+    text-align: center;
+  }
+}
+@media screen and (width < 576px) {
+  .main__text {
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 /*Контент GENERALE (конец кода)*/
@@ -111,9 +172,6 @@ html {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  /*transition: 0.5s*/
-  /*&:hover
-  * transform: scale(1.2)*/
 }
 
 .main__text {
@@ -144,7 +202,6 @@ html {
 .footer-nav,
 .footer__call,
 .footer-icon-call,
-.back-call,
 .footer__bottom {
   display: flex;
 }
@@ -206,7 +263,7 @@ html {
 
 .call-phone__top-link {
   color: black;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
@@ -267,7 +324,6 @@ html {
 .footer-mbl,
 .footer-logotype-mbl,
 .footer-bottom-mbl,
-.footer-nav-mbl,
 .ftr-nav__top-item-mbl,
 .footer__call-phone-mbl,
 .back-call-mbl {
@@ -297,9 +353,11 @@ html {
 }
 
 .footer-nav-mbl {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 50%;
+  align-items: center;
 }
 
 .ftr-nav__top-link-mbl {
@@ -308,13 +366,13 @@ html {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
   color: black;
   text-decoration: none;
 }
 
 .ftr__call-phone-mbl {
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
