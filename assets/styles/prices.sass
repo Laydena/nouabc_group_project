@@ -1,0 +1,129 @@
+$main-color: #000000
+$footer-bg: rgba(136, 190, 204, 0.25)
+$yellow: rgb(249, 179, 67)
+$red: #E69596
+$green: #5CB772
+$blue: #00ABEC
+
+//Голубые ссылки
+@mixin  blue-link
+    font:
+        family: 'Montserrat', sans-serif
+        weight: 500
+        size: 16px
+    color: $blue
+    text:
+        decoration: underline
+
+//Заголовки секций
+@mixin  section-title
+    font:
+        family: 'Montserrat', sans-serif
+        weight: 500
+        size: 36px
+    text:
+        decoration: none
+    color: $main-color
+
+//Тексты секций
+@mixin  section-text
+    font:
+        family: 'Montserrat', sans-serif
+        weight: 300
+        size: 20px
+    text:
+        decoration: none
+    color: $main-color
+
+.prices__info
+    margin-top: 90px
+
+.prices-title
+    @include section-title
+    margin-top: 0
+
+    @media screen and (width <= 1024px)
+        text-align: center
+
+.prices-text
+    @include section-text
+    text-align: justify
+    margin-top: 0
+    margin-bottom: 16px
+
+    @media screen and (width <= 1024px)
+        text-align: center
+
+.price-cards
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+
+    margin-top: 90px
+
+.price-card-top
+    display: flex
+    gap: 16px
+    margin-bottom: 16px
+
+.price-card-title
+    @include section-text
+    margin: 0
+
+.gl
+    border-bottom: 1px solid $blue
+    width: 90%
+    margin-bottom: 22px
+
+.price
+    color: $main-color
+    text-align: center
+    font-family: Montserrat
+    font-size: 21px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    margin: 0
+
+.price-desc
+    color: rgba(0, 0, 0, 0.60)
+    text-align: center
+    font-family: Montserrat
+    font-size: 17px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    margin: 0
+
+.subscribe-btn
+    background-color: $green
+    border: none
+    border-radius: 30px
+    padding: 15px 28px
+
+    color: #FFF
+    text-align: center
+    font-family: Montserrat
+    font-size: 20px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    text-transform: uppercase
+    cursor: pointer
+
+    &:hover
+        background-color: $blue
+
+.price-card-item
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    border: 1px solid $blue
+    border-radius: 30px
+    width: 35%
+    padding: 25px 36px 36px 36px
+
+.second-price
+    margin-bottom: 40px
+    margin-top: 40px
