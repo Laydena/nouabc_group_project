@@ -1,0 +1,492 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  /*border: 1px solid rgb(255, 0, 0) */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+@media screen and (576px <= width <= 1024px) {
+  .container {
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+}
+@media screen and (width < 576px) {
+  .container {
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+/*Контент GENERALE (начало кода) */
+.main,
+.main__title,
+.main__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  text-decoration: none;
+  color: #000000;
+  padding-top: 90px;
+}
+@media screen and (576px <= width <= 1024px) {
+  .main__title {
+    text-align: center;
+    padding-top: 35px;
+  }
+}
+@media screen and (width < 576px) {
+  .main__title {
+    text-align: center;
+    padding-top: 35px;
+    font-size: 28px;
+  }
+}
+
+.main__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+@media screen and (576px <= width <= 1024px) {
+  .main__text {
+    text-align: center;
+  }
+}
+@media screen and (width < 576px) {
+  .main__text {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media screen and (576px <= width <= 1024px) {
+  .main__map {
+    display: flex;
+  }
+}
+@media screen and (width < 576px) {
+  .main__map {
+    display: flex;
+  }
+}
+
+@media screen and (width > 1024px) {
+  .map-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 40px;
+    padding-bottom: 90px;
+  }
+}
+@media screen and (576px <= width <= 1024px) {
+  .map-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 16px;
+    padding-bottom: 35px;
+  }
+}
+@media screen and (width < 576px) {
+  .map-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-top: 16px;
+    padding-bottom: 35px;
+  }
+}
+
+.main__contacts {
+  display: flex;
+  justify-content: space-around;
+}
+
+.our_contacts {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.address,
+.phone,
+.email {
+  display: flex;
+}
+
+.address-logo,
+.phone-logo,
+.email-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+}
+
+.address-text-p {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.phone {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.phone-nomber {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.email-address {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.top-link {
+  color: black;
+  text-decoration: none;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.fdb-contacts {
+  font-family: Montserrat;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.input-contacts {
+  font-family: Montserrat;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 2px solid rgb(92, 183, 114);
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+.input-contacts::-moz-placeholder {
+  color: rgb(92, 183, 114);
+  opacity: 1;
+}
+.input-contacts::placeholder {
+  color: rgb(92, 183, 114);
+  opacity: 1;
+}
+
+/*Контент GENERALE (конец кода)*/
+/*Контент MOBILE (начало кода)*/
+.main-mbl,
+.main__title-mbl,
+.main__text-mbl {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__title-mbl {
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.mn__text-mbl {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.gallery__item-mbl {
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.gallery-img-mbl {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+/*Контент MOBILE (конец кода) */
+/*Footer GENERALE (начало кода)*/
+.wrapper {
+  background-color: rgba(136, 190, 204, 0.25);
+  margin-top: 90px;
+}
+
+@media screen and (width >= 1024px) {
+  .wrapper-mbl {
+    display: none;
+  }
+}
+
+.footer,
+.footer__top,
+.footer__logo,
+.footer__content,
+.footer-nav,
+.footer__call,
+.footer-icon-call,
+.footer__bottom {
+  display: flex;
+}
+
+.footer {
+  flex-direction: column;
+  height: 368px;
+  justify-content: space-between;
+}
+
+.footer__top {
+  margin-top: 4%;
+  margin-bottom: 2%;
+  height: 75%;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 17%;
+}
+
+.logo__link {
+  max-width: 100%;
+}
+
+.logo-footer {
+  width: 100%;
+}
+
+.footer__content {
+  width: 79%;
+  justify-content: space-between;
+}
+
+.footer__call {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-nav__top-link {
+  font-family: Montserrat;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+}
+
+.footer-icon-call {
+  justify-content: right;
+  /*border: none */
+  /*border-radius: 50px */
+}
+
+/*.icon-col__link
+ * justify-content: right
+ * border: none
+ * border-radius: 50px */
+.call-phone__top-link {
+  color: black;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+}
+
+.back-call-p {
+  color: #00abec;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.footer__bottom {
+  height: 20%;
+  justify-content: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*Footer GENERALE (конец кода)*/
+/*Footer MOBILE (начало кода)*/
+.wrapper-mbl {
+  background-color: rgba(136, 190, 204, 0.25);
+  margin-top: 90px;
+}
+
+@media screen and (width < 1024px) {
+  .wrapper {
+    display: none;
+  }
+}
+
+@media screen and (576px <= width <= 1024px) {
+  .container-mbl {
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+}
+@media screen and (width < 576px) {
+  .container-mbl {
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.footer-mbl,
+.footer-logotype-mbl,
+.footer-bottom-mbl,
+.ftr-nav__top-item-mbl,
+.footer__call-phone-mbl,
+.back-call-mbl {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-mbl {
+  margin-top: 29px;
+  margin-bottom: 63px;
+  flex-direction: column;
+  height: 558px;
+  justify-content: space-between;
+}
+
+.footer-bottom-mbl {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.ftr-btm-mdl {
+  margin: 0;
+}
+
+.footer-nav-mbl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  align-items: center;
+}
+
+.ftr-nav__top-link-mbl {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.ftr__call-phone-mbl {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+}
+
+.back-call-mbl-p {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #00abec;
+  text-decoration: underline;
+}
+
+/*Footer MOBILE (конец кода)*//*# sourceMappingURL=contacts.css.map */
