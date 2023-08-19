@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
   box-sizing: border-box;
-  /*border: 1px solid rgb(255, 0, 0) */
 }
 
 body,
@@ -26,19 +25,18 @@ html {
 @media screen and (width < 576px) {
   .container {
     padding: 0 15px;
-    margin: 0 auto;
   }
 }
 
 /*Контент GENERALE (начало кода) */
-.main,
-.main__title,
-.main__text {
+.main {
   display: flex;
   flex-direction: column;
 }
 
 .main__title {
+  display: flex;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 36px;
@@ -61,6 +59,8 @@ html {
 }
 
 .main__text {
+  display: flex;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -79,57 +79,56 @@ html {
   }
 }
 
-@media screen and (576px <= width <= 1024px) {
-  .main__map {
-    display: flex;
-  }
-}
-@media screen and (width < 576px) {
-  .main__map {
-    display: flex;
+@media screen and (width > 1024px) {
+  .yandex-map {
+    border-radius: 30px;
   }
 }
 
 @media screen and (width > 1024px) {
-  .map-img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    padding-top: 40px;
-    padding-bottom: 90px;
+  .main__map {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
-@media screen and (576px <= width <= 1024px) {
-  .map-img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    padding-top: 16px;
-    padding-bottom: 35px;
-  }
-}
-@media screen and (width < 576px) {
-  .map-img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    padding-top: 16px;
-    padding-bottom: 35px;
+@media screen and (width <= 1024px) {
+  .main__map {
+    margin-top: 45px;
+    margin-bottom: 45px;
   }
 }
 
-.main__contacts {
-  display: flex;
-  justify-content: space-around;
+@media screen and (width > 1024px) {
+  .main__contacts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (576px <= width <= 1024px) {
+  .main__contacts {
+    flex-direction: column;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (width < 576px) {
+  .main__contacts {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
 }
 
 .our_contacts {
   display: flex;
   flex-direction: column;
-  width: 35%;
+}
+@media screen and (width > 1024px) {
+  .our_contacts {
+    width: 35%;
+  }
 }
 
 .address,
@@ -137,13 +136,41 @@ html {
 .email {
   display: flex;
 }
+@media screen and (width <= 1024px) {
+  .address,
+  .phone,
+  .email {
+    flex-direction: column;
+  }
+}
 
 .address-logo,
 .phone-logo,
 .email-logo {
   display: flex;
   align-items: center;
-  margin-right: 22px;
+}
+@media screen and (width > 1024px) {
+  .address-logo,
+  .phone-logo,
+  .email-logo {
+    margin-right: 22px;
+  }
+}
+@media screen and (width <= 1024px) {
+  .address-logo,
+  .phone-logo,
+  .email-logo {
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .address-logo-img {
+    align-items: center;
+  }
 }
 
 .address-text-p {
@@ -153,6 +180,13 @@ html {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+}
+@media screen and (width <= 1024px) {
+  .address-text-p {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
 }
 
 .phone {
@@ -168,6 +202,14 @@ html {
   letter-spacing: 0em;
   text-align: left;
 }
+@media screen and (width <= 1024px) {
+  .phone-nomber {
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
 
 .email-address {
   font-family: Montserrat;
@@ -179,6 +221,14 @@ html {
   text-align: left;
   align-items: center;
 }
+@media screen and (width <= 1024px) {
+  .email-address {
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
 
 .top-link {
   color: black;
@@ -188,7 +238,16 @@ html {
 .feedback {
   display: flex;
   flex-direction: column;
-  width: 45%;
+}
+@media screen and (width > 1024px) {
+  .feedback {
+    width: 45%;
+  }
+}
+@media screen and (width <= 1024px) {
+  .feedback {
+    margin-top: 45px;
+  }
 }
 
 .fdb-contacts {
@@ -198,6 +257,13 @@ html {
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
+}
+@media screen and (width <= 1024px) {
+  .fdb-contacts {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
 }
 
 .input-contacts {
@@ -214,63 +280,46 @@ html {
   padding: 8px;
 }
 .input-contacts::-moz-placeholder {
-  color: rgb(92, 183, 114);
+  color: rgb(118, 185, 135);
   opacity: 1;
 }
 .input-contacts::placeholder {
-  color: rgb(92, 183, 114);
+  color: rgb(118, 185, 135);
   opacity: 1;
 }
 
-/*Контент GENERALE (конец кода)*/
-/*Контент MOBILE (начало кода)*/
-.main-mbl,
-.main__title-mbl,
-.main__text-mbl {
+.form {
   display: flex;
   flex-direction: column;
 }
 
-.main__title-mbl {
+@media screen and (width <= 1024px) {
+  .contacts-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.contacts-btn {
+  background-color: #5CB772;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 28px;
+  float: right;
+  color: #FFF;
   font-family: Montserrat;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 34px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-
-.mn__text-mbl {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-
-.gallery__item-mbl {
-  display: flex;
-  padding-top: 4px;
-  padding-bottom: 2px;
-}
-
-.gallery-img-mbl {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.main__text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
   font-size: 20px;
-  text-decoration: none;
-  color: #000000;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contacts-btn:hover {
+  background-color: rgb(143, 205, 128);
 }
 
-/*Контент MOBILE (конец кода) */
+/*Контент GENERALE (конец кода)*/
 /*Footer GENERALE (начало кода)*/
 .wrapper {
   background-color: rgba(136, 190, 204, 0.25);
@@ -347,14 +396,8 @@ html {
 
 .footer-icon-call {
   justify-content: right;
-  /*border: none */
-  /*border-radius: 50px */
 }
 
-/*.icon-col__link
- * justify-content: right
- * border: none
- * border-radius: 50px */
 .call-phone__top-link {
   color: black;
   font-family: Montserrat;
@@ -406,12 +449,14 @@ html {
 
 @media screen and (576px <= width <= 1024px) {
   .container-mbl {
+    min-width: 576px;
     padding: 0 30px;
     margin: 0 auto;
   }
 }
 @media screen and (width < 576px) {
   .container-mbl {
+    min-width: 280px;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -428,8 +473,8 @@ html {
 }
 
 .footer-mbl {
-  margin-top: 29px;
-  margin-bottom: 63px;
+  padding-top: 30px;
+  padding-bottom: 50px;
   flex-direction: column;
   height: 558px;
   justify-content: space-between;

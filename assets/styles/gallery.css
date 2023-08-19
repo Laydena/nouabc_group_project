@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
   box-sizing: border-box;
-  border: 1px solid rgb(255, 0, 0);
 }
 
 body,
@@ -43,13 +42,7 @@ html {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2%;
 }
-@media screen and (576px <= width <= 1024px) {
-  .main__gallery {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media screen and (width < 576px) {
+@media screen and (width <= 1024px) {
   .main__gallery {
     display: flex;
     flex-direction: column;
@@ -75,21 +68,13 @@ html {
     transform: scale(1.2);
   }
 }
-@media screen and (576px <= width <= 1024px) {
+@media screen and (width <= 1024px) {
   .gallery-img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: none;
-  }
-}
-@media screen and (width < 576px) {
-  .gallery-img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 
