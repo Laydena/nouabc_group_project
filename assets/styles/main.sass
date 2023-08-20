@@ -1,39 +1,4 @@
-$main-color: #000000
-$footer-bg: rgba(136, 190, 204, 0.25)
-$yellow: rgb(249, 179, 67)
-$red: #E69596
-$green: #5CB772
-$blue: #00ABEC
-
-//Голубые ссылки
-@mixin  blue-link
-    font:
-        family: 'Montserrat', sans-serif
-        weight: 500
-        size: 16px
-    color: $blue
-    text:
-        decoration: underline
-
-//Заголовки секций
-@mixin  section-title
-    font:
-        family: 'Montserrat', sans-serif
-        weight: 500
-        size: 36px
-    text:
-        decoration: none
-    color: $main-color
-
-//Тексты секций
-@mixin  section-text
-    font:
-        family: 'Montserrat', sans-serif
-        weight: 300
-        size: 20px
-    text:
-        decoration: none
-    color: $main-color
+@import colors-fonts
 
 *
     box-sizing: border-box
@@ -95,7 +60,8 @@ html
     font-weight: 700
 /*Шапка сайта Desktop конец*/
 
-/*Шапка сайта Mobile начало*/
+    /*Шапка сайта Mobile начало*/
+
 .header-mobile
     background-color: $footer-bg
 
@@ -154,8 +120,6 @@ html
 .burger-button span:nth-child(1)
     transform: translateY(-15px)
 
-.burger-button span:nth-child(2)
-
 .burger-button span:nth-child(3)
     transform: translateY(15px)
 
@@ -187,3 +151,181 @@ html
 .nav_items-mob--active
     font-weight: 700
 /*Шапка сайта Mobile конец*/
+
+/*Footer GENERALE (начало кода)*/
+.wrapper
+    background-color: $footer-bg
+    margin-top: 90px
+
+.wrapper-mbl
+    @media screen and (width >= 1024px)
+        display: none
+
+.footer,
+.footer__top,
+.footer__logo,
+.footer__content,
+.footer-nav,
+.footer__call,
+.footer-icon-call,
+.footer__bottom
+    display: flex
+    
+.footer
+    flex-direction: column
+    height: 368px
+    justify-content: space-between
+
+.footer__top
+    margin-top: 4%
+    margin-bottom: 2%
+    height: 75%
+    justify-content: space-between
+
+.footer__logo
+    width: 17%
+
+.logo__link
+    max-width: 100%
+
+.logo-footer
+    width: 100%
+
+.footer__content
+    width: 79%
+    justify-content: space-between
+
+.footer__call
+    flex-direction: column
+    justify-content: space-between
+
+.icon-call__img
+    width: 80px
+
+.footer-nav
+    flex-direction: column
+    justify-content: space-between
+
+.footer-nav__top-link
+    font-family: Montserrat
+    color: black
+    font-size: 20px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0em
+    text-align: left
+    text-decoration: none
+
+    &:hover
+        font-weight: 700
+
+.footer-icon-call
+    justify-content: right
+
+.call-phone__top-link
+    color: black
+    font-family: Montserrat
+    font-size: 24px
+    font-weight: 400
+    line-height: 29px
+    letter-spacing: 0em
+    text-align: left
+    text-decoration: none
+
+.back-call-p
+    @include blue-link
+    margin: 0
+
+.footer__bottom
+    height: 20%
+    justify-content: center
+    font-family: Montserrat
+    font-size: 20px
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0em
+    text-align: center
+    margin-top: 20px
+    margin-bottom: 20px
+/*Footer GENERALE (конец кода)*/
+
+/*Footer MOBILE (начало кода)*/
+.wrapper-mbl
+    background-color: $footer-bg
+    margin-top: 90px
+
+.wrapper
+    @media screen and (width < 1024px)
+        display: none
+
+.container-mbl
+    @media screen and (576px <= width <= 1024px)
+        min-width: 576px
+        padding: 0 30px
+        margin: 0 auto
+    @media screen and (width < 576px)
+        min-width: 280px
+        padding: 0 15px
+        margin: 0 auto
+
+.footer-mbl,
+.footer-logotype-mbl,
+.footer-bottom-mbl,
+.ftr-nav__top-item-mbl,
+.footer__call-phone-mbl,
+.back-call-mbl
+    display: flex
+    justify-content: center
+
+.footer-mbl
+    padding-top: 30px
+    padding-bottom: 50px
+    flex-direction: column
+    height: 558px
+    justify-content: space-between
+
+.footer-bottom-mbl
+    font-family: Montserrat
+    font-size: 14px
+    font-weight: 300
+    line-height: 17px
+    letter-spacing: 0em
+    text-align: center
+
+.ftr-btm-mdl
+    margin: 0
+
+.footer-nav-mbl
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 50%
+    align-items: center
+
+.ftr-nav__top-link-mbl
+    font-family: Montserrat
+    font-size: 20px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0em
+    text-align: center
+    color: black
+    text-decoration: none
+
+    &:hover
+        font-weight: 700
+
+.ftr__call-phone-mbl
+    font-family: Montserrat
+    font-size: 24px
+    font-weight: 400
+    line-height: 29px
+    letter-spacing: 0em
+    text-align: left
+    color: black
+    text-decoration: none
+
+.back-call-mbl-p
+    @include blue-link
+    text-decoration: underline
+/*Footer MOBILE (конец кода)*/

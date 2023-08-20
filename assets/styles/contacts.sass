@@ -1,85 +1,32 @@
-$main-color: #000000
-$footer-bg: rgba(136, 190, 204, 0.25)
-$yellow: rgb(249, 179, 67)
-$red: #E69596
-$green: #5CB772
-$blue: #00ABEC
-
-//Голубые ссылки
-@mixin  blue-link
-  font:
-    family: 'Montserrat', sans-serif
-    weight: 500
-    size: 16px
-  color: $blue
-  text:
-    decoration: underline
-
-//Заголовки секций
-@mixin  section-title
-  font:
-    family: 'Montserrat', sans-serif
-    weight: 500
-    size: 36px
-  text:
-    decoration: none
-  color: $main-color
-
-//Тексты секций
-@mixin  section-text
-  font:
-    family: 'Montserrat', sans-serif
-    weight: 300
-    size: 20px
-  text:
-    decoration: none
-  color: $main-color
-
-*
-  box-sizing: border-box
-
-body,
-html
-  margin: 0
-  padding: 0
-  height: 100%
-
-.container
-  max-width: 1170px
-  margin-left: auto
-  margin-right: auto
-  padding: 0 30px
-  @media screen and (576px <= width <= 1024px)
-    padding: 0 30px
-    margin: 0 auto
-  @media screen and (width < 576px)
-    padding: 0 15px
+@import colors-fonts
 
 /*Контент GENERALE (начало кода)
 .main
   display: flex
   flex-direction: column
 
+.contacts-info
+  margin-top: 90px
+  margin-bottom: 22px
+
+  @media screen and (width <= 1024px)
+        margin-top: 45px
+
 .main__title
   display: flex
   flex-direction: column
   @include section-title
-  padding-top: 90px
-  @media screen and (576px <= width <= 1024px)
+  margin-top: 0
+  @media screen and (width <= 1024px)
     text-align: center
-    padding-top: 35px
-  @media screen and (width < 576px)
-    text-align: center
-    padding-top: 35px
     font-size: 28px
 
 .main__text
   display: flex
   flex-direction: column
   @include section-text
-  @media screen and (576px <= width <= 1024px)
-    text-align: center
-  @media screen and (width < 576px)
+  margin: 0
+  @media screen and (width <= 1024px)
     text-align: center
     font-size: 16px
 
@@ -90,25 +37,17 @@ html
 .main__map
   @media screen and (width > 1024px)
     display: flex
-    margin-top: 15px
-    margin-bottom: 15px
+    margin-bottom: 69px
   @media screen and (width <= 1024px)
-    margin-top: 45px
-    margin-bottom: 45px
+    margin-bottom: 24px
     
 .main__contacts
   @media screen and (width > 1024px)
     display: flex
     justify-content: space-around
-    margin-top: 15px
-    margin-bottom: 15px
   @media screen and (576px <= width <= 1024px)
     flex-direction: column
-    margin-top: 12px
-    margin-bottom: 12px
   @media screen and (width < 576px)
-    margin-top: 9px
-    margin-bottom: 9px
 
 .our_contacts
   display: flex
@@ -214,7 +153,7 @@ html
   line-height: 26px
   letter-spacing: 0em
   text-align: left
-  border: 2px solid rgb(92, 183, 114)
+  border: 2px solid $blue
   width: 100%
   margin-top: 8px
   margin-bottom: 8px
@@ -247,187 +186,5 @@ html
   text-transform: uppercase
   cursor: pointer
   &:hover
-    background-color: rgb(143, 205, 128)
+    background-color: $blue
 /*Контент GENERALE (конец кода)*/
-
-/*Footer GENERALE (начало кода)*/
-.wrapper
-  background-color: $footer-bg
-  margin-top: 90px
-
-.wrapper-mbl
-  @media screen and (width >= 1024px)
-    display: none
-
-.footer,
-.footer__top,
-.footer__logo,
-.footer__content,
-.footer-nav,
-.footer__call,
-.footer-icon-call,
-.footer__bottom
-  display: flex
-  
-.footer
-  flex-direction: column
-  height: 368px
-  justify-content: space-between
-
-.footer__top
-  margin-top: 4%
-  margin-bottom: 2%
-  height: 75%
-  justify-content: space-between
-
-.footer__logo
-  width: 17%
-
-.logo__link
-  max-width: 100%
-
-.logo-footer
-  width: 100%
-
-.footer__content
-  width: 79%
-  justify-content: space-between
-
-.footer__call
-  flex-direction: column
-  justify-content: space-between
-
-.footer-nav
-  flex-direction: column
-  justify-content: space-between
-
-.footer-nav__top-link
-  font-family: Montserrat
-  color: black
-  font-size: 20px
-  font-weight: 400
-  line-height: 24px
-  letter-spacing: 0em
-  text-align: left
-  text-decoration: none
-
-.footer-icon-call
-  justify-content: right
-
-.call-phone__top-link
-  color: black
-  font-family: Montserrat
-  font-size: 24px
-  font-weight: 400
-  line-height: 29px
-  letter-spacing: 0em
-  text-align: left
-  text-decoration: none
-  
-.back-call-p
-  color: #00abec
-  font-family: Montserrat
-  font-size: 16px
-  font-weight: 500
-  line-height: 20px
-  letter-spacing: 0em
-  text-align: left
-  text-decoration: underline
-  margin: 0
-  
-.footer__bottom
-  height: 20%
-  justify-content: center
-  font-family: Montserrat
-  font-size: 20px
-  font-weight: 300
-  line-height: 24px
-  letter-spacing: 0em
-  text-align: center
-  margin-top: 20px
-  margin-bottom: 20px
-/*Footer GENERALE (конец кода)*/
-
-/*Footer MOBILE (начало кода)*/
-.wrapper-mbl
-  background-color: $footer-bg
-  margin-top: 90px
-  
-.wrapper
-  @media screen and (width < 1024px)
-    display: none
-
-.container-mbl
-  @media screen and (576px <= width <= 1024px)
-    min-width: 576px
-    padding: 0 30px
-    margin: 0 auto
-  @media screen and (width < 576px)
-    min-width: 280px
-    padding: 0 15px
-    margin: 0 auto
-
-.footer-mbl,
-.footer-logotype-mbl,
-.footer-bottom-mbl,
-.ftr-nav__top-item-mbl,
-.footer__call-phone-mbl,
-.back-call-mbl
-  display: flex
-  justify-content: center
-  
-.footer-mbl
-  padding-top: 30px
-  padding-bottom: 50px
-  flex-direction: column
-  height: 558px
-  justify-content: space-between
-
-.footer-bottom-mbl
-  font-family: Montserrat
-  font-size: 14px
-  font-weight: 300
-  line-height: 17px
-  letter-spacing: 0em
-  text-align: center
-    
-.ftr-btm-mdl
-  margin: 0
-
-.footer-nav-mbl
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  height: 50%
-  align-items: center
-
-.ftr-nav__top-link-mbl
-  font-family: Montserrat
-  font-size: 20px
-  font-weight: 400
-  line-height: 24px
-  letter-spacing: 0em
-  text-align: center
-  color: black
-  text-decoration: none
-
-.ftr__call-phone-mbl
-  font-family: Montserrat
-  font-size: 24px
-  font-weight: 400
-  line-height: 29px
-  letter-spacing: 0em
-  text-align: left
-  color: black
-  text-decoration: none
-
-.back-call-mbl-p
-  font-family: Montserrat
-  font-size: 16px
-  font-weight: 500
-  line-height: 20px
-  letter-spacing: 0em
-  text-align: left
-  color: #00abec
-  text-decoration: underline
-/*Footer MOBILE (конец кода)*/

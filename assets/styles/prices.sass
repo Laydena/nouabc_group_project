@@ -1,39 +1,4 @@
-$main-color: #000000
-$footer-bg: rgba(136, 190, 204, 0.25)
-$yellow: rgb(249, 179, 67)
-$red: #E69596
-$green: #5CB772
-$blue: #00ABEC
-
-//Голубые ссылки
-@mixin  blue-link
-    font:
-        family: 'Montserrat', sans-serif
-        weight: 500
-        size: 16px
-    color: $blue
-    text:
-        decoration: underline
-
-//Заголовки секций
-@mixin  section-title
-    font:
-        family: 'Montserrat', sans-serif
-        weight: 500
-        size: 36px
-    text:
-        decoration: none
-    color: $main-color
-
-//Тексты секций
-@mixin  section-text
-    font:
-        family: 'Montserrat', sans-serif
-        weight: 300
-        size: 20px
-    text:
-        decoration: none
-    color: $main-color
+@import colors-fonts
 
 .prices__info
     margin-top: 90px
@@ -52,8 +17,7 @@ $blue: #00ABEC
 .prices-text
     @include section-text
     text-align: justify
-    margin-top: 0
-    margin-bottom: 16px
+    margin: 0
 
     @media screen and (width <= 1024px)
         text-align: center
@@ -62,10 +26,9 @@ $blue: #00ABEC
 .price-cards
     display: flex
     justify-content: space-around
-    margin-top: 90px
+    margin-top: 40px
 
     @media screen and (width < 1024px)
-        margin-top: 45px
         flex-direction: column
         align-items: center
         gap: 22px

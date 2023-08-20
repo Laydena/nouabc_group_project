@@ -74,7 +74,8 @@ html {
 }
 
 /*Шапка сайта Desktop конец*/
-/*Шапка сайта Mobile начало*/
+ *
+ *  /*Шапка сайта Mobile начало*/
 .header-mobile {
   background-color: rgba(136, 190, 204, 0.25);
 }
@@ -180,4 +181,226 @@ html {
   font-weight: 700;
 }
 
-/*Шапка сайта Mobile конец*//*# sourceMappingURL=main.css.map */
+/*Шапка сайта Mobile конец*/
+/*Footer GENERALE (начало кода)*/
+.wrapper {
+  background-color: rgba(136, 190, 204, 0.25);
+  margin-top: 90px;
+}
+
+@media screen and (width >= 1024px) {
+  .wrapper-mbl {
+    display: none;
+  }
+}
+
+.footer,
+.footer__top,
+.footer__logo,
+.footer__content,
+.footer-nav,
+.footer__call,
+.footer-icon-call,
+.footer__bottom {
+  display: flex;
+}
+
+.footer {
+  flex-direction: column;
+  height: 368px;
+  justify-content: space-between;
+}
+
+.footer__top {
+  margin-top: 4%;
+  margin-bottom: 2%;
+  height: 75%;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 17%;
+}
+
+.logo__link {
+  max-width: 100%;
+}
+
+.logo-footer {
+  width: 100%;
+}
+
+.footer__content {
+  width: 79%;
+  justify-content: space-between;
+}
+
+.footer__call {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon-call__img {
+  width: 80px;
+}
+
+.footer-nav {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-nav__top-link {
+  font-family: Montserrat;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+}
+.footer-nav__top-link:hover {
+  font-weight: 700;
+}
+
+.footer-icon-call {
+  justify-content: right;
+}
+
+.call-phone__top-link {
+  color: black;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+}
+
+.back-call-p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #00ABEC;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0;
+}
+
+.footer__bottom {
+  height: 20%;
+  justify-content: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*Footer GENERALE (конец кода)*/
+/*Footer MOBILE (начало кода)*/
+.wrapper-mbl {
+  background-color: rgba(136, 190, 204, 0.25);
+  margin-top: 90px;
+}
+
+@media screen and (width < 1024px) {
+  .wrapper {
+    display: none;
+  }
+}
+
+@media screen and (576px <= width <= 1024px) {
+  .container-mbl {
+    min-width: 576px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+}
+@media screen and (width < 576px) {
+  .container-mbl {
+    min-width: 280px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.footer-mbl,
+.footer-logotype-mbl,
+.footer-bottom-mbl,
+.ftr-nav__top-item-mbl,
+.footer__call-phone-mbl,
+.back-call-mbl {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-mbl {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  flex-direction: column;
+  height: 558px;
+  justify-content: space-between;
+}
+
+.footer-bottom-mbl {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.ftr-btm-mdl {
+  margin: 0;
+}
+
+.footer-nav-mbl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  align-items: center;
+}
+
+.ftr-nav__top-link-mbl {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+.ftr-nav__top-link-mbl:hover {
+  font-weight: 700;
+}
+
+.ftr__call-phone-mbl {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+}
+
+.back-call-mbl-p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #00ABEC;
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*Footer MOBILE (конец кода)*//*# sourceMappingURL=main.css.map */
